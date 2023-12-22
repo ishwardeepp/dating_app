@@ -1,4 +1,3 @@
-
 // ignore_for_file: camel_case_types
 
 import 'package:dating_app/button.dart';
@@ -8,7 +7,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
-
 class uploadScreen extends StatefulWidget {
   const uploadScreen({super.key});
 
@@ -17,7 +15,7 @@ class uploadScreen extends StatefulWidget {
 }
 
 class _uploadScreenState extends State<uploadScreen> {
-  List<XFile?> fileList = [null,null,null,null,null,null];
+  List<XFile?> fileList = [null, null, null, null, null, null];
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +24,8 @@ class _uploadScreenState extends State<uploadScreen> {
       padding: EdgeInsets.all(20.sp),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [SizedBox(
+        children: [
+          SizedBox(
             height: 5.h,
           ),
           RichText(
