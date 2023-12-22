@@ -34,7 +34,9 @@ class _gridViewerState extends State<gridViewer> {
         itemCount: 6,
         itemBuilder: (BuildContext context, int index) {
           return InkWell(
-            onTap: widget.fileList[index] == null? (){}: () => bottomSheet(false, index),
+            onTap: widget.fileList[index] == null
+                ? () {}
+                : () => bottomSheet(false, index),
             child: Container(
               height: 30.h,
               width: 45.w,
@@ -48,11 +50,11 @@ class _gridViewerState extends State<gridViewer> {
                       icon: const Icon(Icons.add_circle_outline_sharp),
                       color: Colors.white,
                       iconSize: 30.sp,
-                      onPressed: () async =>
-                          await bottomSheet(true, index),
+                      onPressed: () async => await bottomSheet(true, index),
                     )
                   : Stack(children: [
-                      ClipRRect(borderRadius: BorderRadius.all(Radius.circular(20.sp)),
+                      ClipRRect(
+                        borderRadius: BorderRadius.all(Radius.circular(20.sp)),
                         child: Image.file(
                           File(widget.fileList[index]!.path),
                           fit: BoxFit.fill,
