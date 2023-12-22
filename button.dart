@@ -27,9 +27,7 @@ class _bottomButtonState extends State<bottomButton> {
             ),
           ),
         ),
-        onPressed: (nullcheck() == 0)
-            ? () {}
-            : () => print("Button pressed"),
+        onPressed: (nullcheck() == 0) ? () {} : () => print("Button pressed"),
         child: Container(
             decoration: (nullcheck() == 0)
                 ? const BoxDecoration(
@@ -58,13 +56,13 @@ class _bottomButtonState extends State<bottomButton> {
               ]),
             )));
   }
-  int nullcheck(){
-    int i=0;
-    while(i< widget.fileList.length){
-      if(widget.fileList[i] != null){
+
+  int nullcheck() {
+    int i = 0;
+    while (i < widget.fileList.length) {
+      if (widget.fileList[i] != null) {
         return 1;
-      }
-      else{
+      } else {
         i++;
         return 0;
       }
